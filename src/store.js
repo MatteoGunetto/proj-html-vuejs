@@ -33,6 +33,32 @@ export const store = reactive(
             img2: '../src/assets/img/Graphic-Design.png',
             active: false
         }
+      ],
+      coursesArray: [
+        {
+            text: 'Make Better Decisions',
+            teacher: 'Teacher1',
+            price: '$21.00',
+            img: '../src/assets/img/Decisions-icon.png'
+        },
+        {
+            text: 'How to be a speaker',
+            teacher: 'Teacher2',
+            price: 'Free',
+            img: '../src/assets/img/Speaker-icon.png'
+        },
+        {
+            text: 'Network Introductions',
+            teacher: 'Teacher3',
+            price: '$15.00',
+            img: '../src/assets/img/Network-icon.png'
+        },
+        {
+            text: 'Brand Management',
+            teacher: 'Teacher4',
+            price: '$50.00',
+            img: '../src/assets/img/Brand-icon.png'
+        },
       ]
     }
 )
