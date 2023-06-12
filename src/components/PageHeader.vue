@@ -57,6 +57,7 @@ export default{
     </div>
   </header>
 </template>
+
 <style lang="scss" scoped>
 header{
   background-color: #E56768;
