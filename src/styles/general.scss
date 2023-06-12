@@ -1,0 +1,26 @@
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+li{
+    list-style-type: none;
+
+}
+
+.btn{
+    border-radius: 40px;
+    padding: 10px 20px;
+
+  }
+
+  .btn-yellow{
+    background-color: #E9D758;
+  }
