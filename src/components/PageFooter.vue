@@ -60,6 +60,7 @@ export default{
             </div>
           </div>
         </div>
+        <img  class="wave-3" src="../assets/img/background-wave3.png" alt="">
       </section>
       <section id="foot">
         <div class="container d-flex justify-content-between">
@@ -169,12 +170,10 @@ export default{
       #partners{
         .container{
           padding-top: 50px;
-          padding-bottom: 300px;
           h2{
             font-size: 50px;
           }
           .d-flex{
-            
             .partner-box{
               width: 11%;
               text-align: center;
@@ -184,6 +183,7 @@ export default{
               }
               img:hover{
                 filter: contrast(100%);
+                cursor: pointer;
               }
             }
             .width{
@@ -282,4 +282,12 @@ export default{
         }
       }
     }
+    .wave-3{
+      position:relative;
+      left: 446px;
+      background-color: lightgray;
+
+
+    }
+
     </style>
