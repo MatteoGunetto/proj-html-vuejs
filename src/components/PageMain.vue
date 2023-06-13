@@ -6,12 +6,14 @@ export default{
   },
   data(){
     return{
-      store
+      store,
+      activeComp: 0,
     }
   },
   methods: {
     
   changeCourse(elem, index){
+    this.activeComp = index
     document.getElementById("course-box").innerHTML= `
     <div>
       <img src="${elem.img2}" alt="">
@@ -27,7 +29,6 @@ export default{
   }
 }
 </script>
-
 <template>
   <main>
     <section class="section">
@@ -38,25 +39,29 @@ export default{
       </div>
       <div class="container d-flex justify-content-between">
         <div class="left-box">
-          <h2 class="mb-5">Thousands of courses <br> for any type of student</h2>
+          <h2 class="mb-5 fw-bold">Thousands of courses <br> for any type of student</h2>
           <p class="mb-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus in placeat dolor nam! Eius, recusandae. Fugit porro odio eos enim tempore nisi nostrum autem! Fuga voluptate recusandae labore consectetur fugiat.</p>
-          <a class="btn btn-yellow text-white" href="#"><strong>Browse through courses</strong></a>
+          <div class="btn btn-yellow-to-pink text-white">
+            <a href="#">
+              <strong>Browse through courses</strong>
+            </a>
+          </div>
         </div>
         <div class="right-box">
           <img src="../assets/img/Graduation-Illustration.png" alt="">
         </div>
       </div>
     </section>
-    <section class="mt-5">
+    <section id="courses">
       <div class="container">
         <div class="text-center">
-          <h2>Faculties available at EduPrime</h2>
+          <h2 class="fw-bold">Faculties available at EduPrime</h2>
           <p>A single university with a load of courses, tailored <br> to satisfy any student's needs.</p>
         </div>
         <div class="d-flex faculties">
-          <div v-for="(elem, index) in store.facultiesArray" :key="index" @click="changeCourse(elem, index)" class="comp d-flex justify-content-center align-items-center">
-            <img :src="`${elem.img1}`" alt="">
-            <div>{{elem.course}}</div>
+          <div v-for="(elem, index) in store.facultiesArray" :key="index" @click="changeCourse(elem, index)" class="comp d-flex justify-content-center align-items-center" :class="(activeComp == index) ? 'activeComp' : ''">
+            <img :src="`${elem.img1}`" alt="" :class="(activeComp == index) ? 'activeImg' : ''">
+            <div class="mb-3 text-salmone" :class="(activeComp == index) ? 'activeText' : ''">{{elem.course}}</div>
           </div>
         </div>
         <div id="course-box" class="d-flex align-items-center">
@@ -66,7 +71,11 @@ export default{
           <div>
             <h6>Law Faculty</h6>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur nihil quos libero error perspiciatis modi excepturi harum rem sed eius fugaasperiores velit ullam dolorem a, molestiae nisi quibusdam nemo.</p>
-            <a class="btn btn-yellow text-white" href="#"><strong>Browse through courses</strong></a>
+            <div class="btn btn-pink-to-yellow text-white">
+              <a href="#">
+                <strong>Read More</strong>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -76,7 +85,7 @@ export default{
         <div id="clock-icon">
           <img src="../assets/img/Clock-and-Bell.png" alt="">
         </div>
-        <h2>University Year</h2>
+        <h2 class="fw-bold text-white">University Year</h2>
         <div class="time-line">
           <div id="time-line-img">
             <img src="../assets/img/Timeline-Item.png" alt="">
@@ -99,40 +108,56 @@ export default{
           </div>
         </div>   
       </div>
-      <div class="container text-center">
+      <div id="events" class="container text-center">
         <div id="clock-icon">
           <img src="../assets/img/upcoming-events-calendar-icon.png" alt="">
         </div>
-        <h2 class="text-white">Upcoming Events</h2>
+        <h2 class="text-white fw-bold">Upcoming Events</h2>
       </div>
       <div class="container d-flex justify-content-between align-items-center">
         <div class="box-event card text-center p-5">
           <h5>Coaching Session</h5>
           <div>20 May 21:30 PM</div>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, praesentium! Iure [..] </p>
-          <div><a class="btn text-white" href="#"><strong>Find More</strong></a></div>
+          <div class="btn btn-pink-to-yellow text-white">
+            <a href="#">
+              <strong>Find More</strong>
+            </a>
+          </div>
         </div>
         <div class="box-event card text-center p-5">
           <h5>Coaching Session</h5>
           <div>23 May 21:30 PM</div>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, praesentium! Iure [..] </p>
-          <div><a class="btn text-white" href="#"><strong>Find More</strong></a></div>
+          <div class="btn btn-pink-to-yellow text-white">
+            <a href="#">
+              <strong>Find More</strong>
+            </a>
+          </div>
         </div>
         <div class="box-event card text-center p-5">
           <h5>Coaching Session</h5>
           <div>26 May 21:30 PM</div>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, praesentium! Iure [..] </p>
-          <div><a class="btn text-white" href="#"><strong>Find More</strong></a></div>
+          <div class="btn btn-pink-to-yellow text-white">
+            <a href="#">
+              <strong>Find More</strong>
+            </a>
+          </div>
         </div>
       </div>
       <div class="text-center pt-5">
-        <a class="btn btn-yellow text-white" href="#"><strong>Browse through courses</strong></a>
+        <div class="btn btn-yellow text-white">
+            <a href="#">
+              <strong>View all events</strong>
+            </a>
+          </div>
       </div>
 
     </section>
     <section id="latest-courses">
       <div class="container">
-        <h2>Latest Courses</h2>
+        <h2 class="fw-bold">Latest Courses</h2>
         <div class="d-flex justify-content-between align-items-center pb-5">
           <div v-for="(elem, index) in store.coursesArray" :key=index class="box-course text-center">
             <div class="img-box pt-3">
@@ -142,7 +167,7 @@ export default{
               <h5>{{ elem.text }}</h5>
               <h6>Teacher: {{ elem.teacher }}</h6>
               <h6 class="pb-5">Price: {{ elem.price }}</h6>
-              <div class="btn"><a href="#"><strong>View Course</strong></a></div>
+              <div class="btn btn-pink-to-yellow"><a href="#"><strong><i class="fa-solid fa-eye"></i> View Course</strong></a></div>
             </div>
           </div>
         </div>
@@ -152,9 +177,13 @@ export default{
               <div id="exam-icon">
                 <img src="../assets/img/Exam-icon.png" alt="">
               </div>
-              <h2 class="mb-5">The most efficient <br> examination method</h2>
+              <h2 class="mb-5 fw-bold">The most efficient <br> examination method</h2>
               <p class="mb-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus in placeat dolor nam! Eius, recusandae. Fugit porro odio eos     enim tempore nisi nostrum autem! Fuga voluptate recusandae labore consectetur fugiat.</p>
-              <a class="btn text-white" href="#"><strong>Discover the Method</strong></a>
+              <div class="btn btn-pink-to-yellow text-white">
+                <a href="#">
+                  <strong>Discover the method</strong>
+                </a>
+              </div>
             </div>
             <div class="right-box">
               <img src="../assets/img/Exam-Illustration.png" alt="">
@@ -170,9 +199,13 @@ export default{
               <div id="fees-icon">
                 <img src="../assets/img/Exam-icon-1.png" alt="">
               </div>
-              <h2 class="mb-5">Variable fees for <br> international students</h2>
+              <h2 class="mb-5 fw-bold">Variable fees for <br> international students</h2>
               <p class="mb-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus in placeat dolor nam! Eius, recusandae. Fugit porro odio     eos   enim tempore nisi nostrum autem! Fuga voluptate recusandae labore consectetur fugiat.</p>
-              <a class="btn text-white" href="#"><strong>List of Fees</strong></a>
+              <div class="btn btn-pink-to-yellow text-white">
+                <a href="#">
+                  <strong>List of fees</strong>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -180,7 +213,11 @@ export default{
     </section>
   </main>
 </template>
+
 <style lang="scss" scoped>
+h2{
+  font-size: 50px;
+}
 main{
   .section{
     margin-top: 200px;
@@ -195,9 +232,7 @@ main{
     .container{
       .left-box{
         width: 50%;
-        h2{
-          font-size: 50px;
-        }
+        
       }
       .right-box{
         width: 40%;
@@ -207,13 +242,18 @@ main{
       }
     }
   }
-  section.mt-5{
+  #courses{
+    margin: 150px 0;
     .container{
       .faculties{
         .comp{
           width: 20%;
           flex-direction: column;
           border: 1px solid lightgrey;
+          .text-salmone{
+            color: #E56768;
+            font-weight: bold;
+          }
             img{
               width: 40%;
               display: block;
@@ -225,7 +265,7 @@ main{
       #course-box{
         width: 70%;
         margin: 0 auto;
-        
+        margin-top: 50px;
       }
     }
   }
@@ -283,6 +323,15 @@ main{
           left: 50%;
           transform: translateX(-50%);
         }
+        .btn-pink-to-yellow{
+          background-color: #E56768;
+          &:hover{
+              background-color: #E9D758;
+          }
+          &:hover a{
+              color: white;
+          }
+        }
       }
     }
   }
@@ -308,6 +357,15 @@ main{
             transform: translateX(-50%);
             font-size: 15px;
           }
+          .btn-pink-to-yellow{
+            background-color: #E56768;
+            &:hover{
+              background-color: #E9D758;
+            }
+            &:hover a{
+              color: white;
+            }
+          }
         }
       }
       .exam{
@@ -326,9 +384,7 @@ main{
             p{
               padding-right: 100px;
             }
-            a{
-              background-color: #E56768;
-            }
+            
           }
           .right-box{
             width: 50%;
@@ -360,9 +416,7 @@ main{
             p{
               padding-right: 100px;
             }
-            a{
-              background-color: #E56768;
-            }
+            
           }
         }
       }
