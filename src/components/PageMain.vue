@@ -40,7 +40,7 @@ export default{
       <div class="container d-flex justify-content-between">
         <div class="left-box">
           <h2 class="mb-5 fw-bold">Thousands of courses <br> for any type of student</h2>
-          <p class="mb-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus in placeat dolor nam! Eius, recusandae. Fugit porro odio eos enim tempore nisi nostrum autem! Fuga voluptate recusandae labore consectetur fugiat.</p>
+          <p class="mb-5">At EduPrime, it doesn't matter what domain you wish to pursue a carrer in. Here you can find a course that satisfies your needs within a click away and applies for a course in a metter of minutes. EduPrime is ranked as the most versatile university in the world, thanks to the number of courses it provides.</p>
           <div class="btn btn-yellow-to-pink text-white">
             <a href="#">
               <strong>Browse through courses</strong>
@@ -69,8 +69,8 @@ export default{
             <img src="../assets/img/Gavel-Illustration-e1556884768193.png" alt="">
           </div>
           <div>
-            <h6>Law Faculty</h6>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur nihil quos libero error perspiciatis modi excepturi harum rem sed eius fugaasperiores velit ullam dolorem a, molestiae nisi quibusdam nemo.</p>
+            <h2>Law Faculty</h2>
+            <p>Learning from world-leading academics and practitioners, you'll not only recive an oustanding grounding in the theory of law, but you will be able to understand how those principles are applied in practice through a range of student-led activities and competitions.</p>
             <div class="btn btn-pink-to-yellow text-white">
               <a href="#">
                 <strong>Read More</strong>
@@ -80,6 +80,7 @@ export default{
         </div>
       </div>
     </section>
+    <img id="wave-2" src="../assets/img/svg-0.svg" alt=""> 
     <section id="uni-year">
       <div class="container text-center">
         <div id="clock-icon">
@@ -116,31 +117,34 @@ export default{
       </div>
       <div class="container d-flex justify-content-between align-items-center">
         <div class="box-event card text-center p-5">
-          <h5>Coaching Session</h5>
-          <div>20 May 21:30 PM</div>
+          <h3>Coaching Session</h3>
+          <div><i class="fa-solid fa-calendar-days"></i> 20 May 21:30 PM</div>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, praesentium! Iure [..] </p>
           <div class="btn btn-pink-to-yellow text-white">
             <a href="#">
+              <i class="fa-solid fa-plus me-2"></i>
               <strong>Find More</strong>
             </a>
           </div>
         </div>
         <div class="box-event card text-center p-5">
-          <h5>Coaching Session</h5>
-          <div>23 May 21:30 PM</div>
+          <h3>Coaching Session</h3>
+          <div><i class="fa-solid fa-calendar-days"></i> 23 May 21:30 PM</div>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, praesentium! Iure [..] </p>
           <div class="btn btn-pink-to-yellow text-white">
             <a href="#">
+              <i class="fa-solid fa-plus me-2"></i>
               <strong>Find More</strong>
             </a>
           </div>
         </div>
         <div class="box-event card text-center p-5">
-          <h5>Coaching Session</h5>
-          <div>26 May 21:30 PM</div>
+          <h3>Coaching Session</h3>
+          <div><i class="fa-solid fa-calendar-days"></i> 26 May 21:30 PM</div>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, praesentium! Iure [..] </p>
           <div class="btn btn-pink-to-yellow text-white">
             <a href="#">
+              <i class="fa-solid fa-plus me-2"></i>
               <strong>Find More</strong>
             </a>
           </div>
@@ -164,9 +168,15 @@ export default{
               <img :src="`${elem.img}`" alt="">
             </div>
             <div>
-              <h5>{{ elem.text }}</h5>
-              <h6>Teacher: {{ elem.teacher }}</h6>
-              <h6 class="pb-5">Price: {{ elem.price }}</h6>
+              <h5><strong>{{ elem.text }}</strong></h5>
+              <h6>
+                <i class="fa-regular fa-user"></i>
+                Teacher: {{ elem.teacher }}
+              </h6>
+              <h6 class="pb-5">
+                <i class="fa-solid fa-money-bill-1"></i>
+                Price: {{ elem.price }}
+              </h6>
               <div class="btn btn-pink-to-yellow"><a href="#"><strong><i class="fa-solid fa-eye"></i> View Course</strong></a></div>
             </div>
           </div>
@@ -178,7 +188,7 @@ export default{
                 <img src="../assets/img/Exam-icon.png" alt="">
               </div>
               <h2 class="mb-5 fw-bold">The most efficient <br> examination method</h2>
-              <p class="mb-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus in placeat dolor nam! Eius, recusandae. Fugit porro odio eos     enim tempore nisi nostrum autem! Fuga voluptate recusandae labore consectetur fugiat.</p>
+              <p class="mb-5">EduPrime has gathered theachers fro around the globe to brainstorm in order to facilitate the evalution of our students. Every teacher from our university has an influence on how students are evaluted at his/her subject</p>
               <div class="btn btn-pink-to-yellow text-white">
                 <a href="#">
                   <strong>Discover the method</strong>
@@ -200,7 +210,7 @@ export default{
                 <img src="../assets/img/Exam-icon-1.png" alt="">
               </div>
               <h2 class="mb-5 fw-bold">Variable fees for <br> international students</h2>
-              <p class="mb-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus in placeat dolor nam! Eius, recusandae. Fugit porro odio     eos   enim tempore nisi nostrum autem! Fuga voluptate recusandae labore consectetur fugiat.</p>
+              <p class="mb-5">EduPrime has gathered theachers fro around the globe to brainstorm in order to facilitate the evalution of our students. Every teacher from our university has an influence on how students are evaluted at his/her subject</p>
               <div class="btn btn-pink-to-yellow text-white">
                 <a href="#">
                   <strong>List of fees</strong>
@@ -213,7 +223,6 @@ export default{
     </section>
   </main>
 </template>
-
 <style lang="scss" scoped>
 h2{
   font-size: 50px;
@@ -316,15 +325,18 @@ main{
       .box-event{
         width: 32%;
         position: relative;
+        h4{
+          font-weight: bold;
+        }
         .btn{
-          background-color: #E56768;
+          
           position: absolute;
           bottom: -22px;
           left: 50%;
           transform: translateX(-50%);
         }
         .btn-pink-to-yellow{
-          background-color: #E56768;
+          background-color: #DA5F60E6;
           &:hover{
               background-color: #E9D758;
           }
@@ -346,7 +358,8 @@ main{
           .img-box{
             width: 100%;
             img{
-              width: 50%;
+              width: 30%;
+              margin-bottom: 30px;
             }
           }
           .btn{
@@ -369,6 +382,7 @@ main{
         }
       }
       .exam{
+        margin: 150px 0;
         .container{
           .left-box{
             width: 50%;
@@ -395,6 +409,7 @@ main{
         }
       }
       .fees{
+        margin-bottom: 150px;
         .container{
           .left-box{
             width: 50%;
@@ -423,5 +438,18 @@ main{
     }
     
   }
+}
+#wave-3{
+  padding: 0;
+  margin: 0;
+  position: relative;
+  
+  left: -50px;
+  top: -2px;
+}
+#wave-2{
+  position: relative;
+  bottom: -2px;
+  left: -7px;
 }
 </style>

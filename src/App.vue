@@ -40,4 +40,7 @@ export default{
 
 <style lang="scss">
 @use "./styles/general.scss" as *;
+#app{
+  overflow: hidden;
+}
 </style>

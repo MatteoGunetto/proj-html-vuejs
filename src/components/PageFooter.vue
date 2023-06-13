@@ -130,8 +130,12 @@ export default{
         right: 20px;
         border-radius: 50%;
         padding: 10px 15px;
+        &:hover{
+          background-color: #E56768;
+          border: 1px solid #E9D758;
+        }
         &:hover i{
-          color: #E56768;
+          color: #E9D758;
         }
       }
       #newsletter{
@@ -141,6 +145,7 @@ export default{
           .input-group{
             width: 40%;
             position: relative;
+            height: 60px;
             .form-control{
               border-radius: 50px;
               border-right: none;
@@ -152,8 +157,11 @@ export default{
               top: -1px;
               bottom: -1px;
               color: white;
-              padding: 10px 10px;
+              padding: 20px 20px;
               z-index: 200000;
+              &:hover{
+                background-color: #E56768 !important;
+              }
             }
           }
         }
@@ -243,6 +251,9 @@ export default{
               color: white;
               padding: 10px 15px;
               z-index: 200000;
+              &:hover{
+                background-color: #E56768 !important;
+              }
             }
             h6{
               margin-bottom: 40px;
@@ -258,6 +269,10 @@ export default{
                 margin-bottom: 5px;
                 font-size: 10px;
                 cursor: pointer;
+                &:hover{
+                  background-color: #E9D758;
+                  color: #E56768;
+                }
               }
             }
           }

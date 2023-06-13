@@ -37,27 +37,57 @@ export const store = reactive(
       coursesArray: [
         {
             text: 'Make Better Decisions',
-            teacher: 'Teacher1',
+            teacher: 'James Collins',
             price: '$21.00',
             img: '../src/assets/img/Decisions-icon.png'
         },
         {
             text: 'How to be a speaker',
-            teacher: 'Teacher2',
+            teacher: 'James Collins',
             price: 'Free',
             img: '../src/assets/img/Speaker-icon.png'
         },
         {
             text: 'Network Introductions',
-            teacher: 'Teacher3',
-            price: '$15.00',
+            teacher: 'James Collins',
+            price: 'Free',
             img: '../src/assets/img/Network-icon.png'
         },
         {
             text: 'Brand Management',
-            teacher: 'Teacher4',
-            price: '$50.00',
+            teacher: 'James Collins',
+            price: 'Free',
             img: '../src/assets/img/Brand-icon.png'
+        },
+      ],
+      menuLinks: [
+        {
+          name: 'Home',
+          url: '#home'
+        },
+        {
+          name: 'Course',
+          url: '#courses'
+        },
+        {
+          name: 'About Us',
+          url: '#About Us'
+        },
+        {
+          name: 'News',
+          url: '#News'
+        },
+        {
+          name: 'Pages',
+          url: '#Pages'
+        },
+        {
+          name: 'Contact',
+          url: '#Contact'
+        },
+        {
+          name: 'Purchase',
+          url: '#Purchase'
         },
       ]
     }

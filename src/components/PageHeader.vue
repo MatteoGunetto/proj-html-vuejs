@@ -6,36 +6,6 @@ export default{
     return{
       store,
       currentActive: 0,
-      menuLinks: [
-        {
-          name: 'Home',
-          url: '#home'
-        },
-        {
-          name: 'Faculties',
-          url: '#courses'
-        },
-        {
-          name: 'Partners',
-          url: '#partners'
-        },
-        {
-          name: 'Uni-year',
-          url: '#uni-year'
-        },
-        {
-          name: 'Events',
-          url: '#events'
-        },
-        {
-          name: 'About us',
-          url: '#latest-courses'
-        },
-        {
-          name: 'Contact us',
-          url: '#foot'
-        },
-      ]
     }
   },
   methods: {
@@ -45,23 +15,22 @@ export default{
   }
 }
 </script>
-
 <template>
   <header class="">
     <div id="side-menu">
       <div class="d-flex">
         <i class="fa-solid fa-cart-shopping p-1"></i>
-        <span class="display-b">Shopping cart</span> 
+        <span class="display-b">Shopping Cart</span> 
       </div>
       <div class="d-flex">
         <i class="fa-solid fa-book-open p-1"></i>
-        <span class="display-b">Profile</span> 
+        <span class="display-b book">Profile</span> 
       </div>
       <div class="d-flex">
         <i class="fa-solid fa-gear p-1"></i>
         <span class="display-b">Settings</span> 
       </div>
-
+      
     </div>
     <nav class="d-flex justify-content-between align-items-center ">
       <div id="nav-left">
@@ -69,7 +38,7 @@ export default{
       </div>
       <div id="nav-right">
         <ul class="d-flex justify-content-between align-items-center mb-0">
-          <li v-for="(elem, index) in menuLinks" :key="index" @click="changeCurrent(index)" :class="(currentActive == index) ? 'active' : '' ">
+          <li v-for="(elem, index) in store.menuLinks" :key="index" @click="changeCurrent(index)" :class="(currentActive == index) ? 'active' : '' ">
             <a :class="(currentActive == index) ? 'active-bg' : '' " :href="elem.url"><strong>{{ elem.name }}</strong></a>
           </li>
           <div class="btn btn-yellow">
@@ -95,12 +64,14 @@ export default{
               <strong>Apply for universities</strong>
             </a>
           </div>
-
+          
         </div>
       </div>
     </div>
+    <img id="wave-1" src="../assets/img/Wave-1.png" alt="">
   </header>
 </template>
+
 <style lang="scss" scoped>
 header{
   background-color: #E56768;
@@ -138,7 +109,7 @@ header{
     left: 0;
     right: 0;
     top: 0;
-    z-index: 2;
+    z-index: 20000000000;
     #nav-left{
       width: 20%;
       img{
@@ -148,6 +119,8 @@ header{
     }
     #nav-right{
       width: 60%;
+      font-family: 'Fredoka', sans-serif;
+
       a{
         &:hover{
           color: #E9D758;
@@ -158,7 +131,6 @@ header{
   #jumbo{
     position: relative;
     
-    font-weight: bold;
     z-index: 1;
     margin-top: 120px;
     padding-top: 00px;
@@ -187,5 +159,9 @@ header::before{
   opacity: 0.1;
   background-size: cover;
   z-index: 0;
+}
+#wave-1{
+  position: relative;
+  bottom: -148px;
 }
 </style>
