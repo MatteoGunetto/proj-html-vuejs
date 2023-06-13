@@ -182,6 +182,9 @@ export default{
                 width: 40%;
                 filter: contrast(0%);
               }
+              img:hover{
+                filter: contrast(100%);
+              }
             }
             .width{
               width: 15%;

@@ -20,8 +20,8 @@ export default{
     </div>
     <div>
       <h6>${elem.course}</h6>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur nihil quos libero error perspiciatis modi excepturi harum rem sed eius fugaasperiores velit ullam dolorem a, molestiae nisi quibusdam nemo.</p>
-      <a class="btn btn-yellow text-white" href="#"><strong>Browse through courses</strong></a>
+      <p>${elem.description}</p>
+      <a class="btn btn-pink-to-yellow text-white" href="#"><strong>Browse through courses</strong></a>
     </div>
     `
   }
