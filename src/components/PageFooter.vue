@@ -285,7 +285,7 @@ export default{
     .wave-3{
       position:relative;
       left: 446px;
-      background-color: lightgray;
+      background-color: #F7F8FA;
 
 
     }
